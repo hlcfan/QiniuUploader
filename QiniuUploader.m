@@ -1,9 +1,4 @@
-//
-//  QiniuSimpleUploader.m
-//  QiniuSimpleUploader
-//
-//  Created by Qiniu Developers 2013
-//
+// QiniuUploader by @hlcfan
 
 #import "QiniuConfig.h"
 #import "QiniuUploader.h"
@@ -32,16 +27,14 @@
     return self;
 }
 
-- (NSString *)tokenWithScope:(NSString *)scope
-{
+- (NSString *)tokenWithScope:(NSString *)scope {
     QiniuPutPolicy *policy = [QiniuPutPolicy new];
     policy.scope = scope;
     
     return [policy makeToken:self.accessKey secretKey:self.secretKey];
 }
 
-- (void) uploadFile:(NSArray *)filesInfo progress:(void(^)(float percentage))progressBlock complete:(void(^)(NSMutableDictionary *result)) block
-{
+- (void) uploadFile:(NSArray *)filesInfo progress:(void(^)(float percentage))progressBlock complete:(void(^)(NSMutableDictionary *result)) block {
     NSMutableArray *mutableOperations = [NSMutableArray array];
     NSMutableDictionary *ret = [NSMutableDictionary dictionary];
     for (NSDictionary *fileData in filesInfo) {

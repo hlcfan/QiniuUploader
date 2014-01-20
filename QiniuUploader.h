@@ -1,9 +1,4 @@
-//
-//  QiniuSimpleUploader.h
-//  QiniuSimpleUploader
-//
-//  Created by Qiniu Developers 2013
-//
+// QiniuUploader by @hlcfan
 
 #import <Foundation/Foundation.h>
 #import "QiniuPutExtra.h"
