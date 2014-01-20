@@ -1,7 +1,7 @@
 QiniuUploader
 =============
 
-QiniuUploader for iOS
+QiniuUploader for iOS - single image or multi images supported
 
 ### Usage:
 
