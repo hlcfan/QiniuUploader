@@ -8,12 +8,13 @@
 @property (nonatomic, strong) NSString *filePath;
 
 @property (nonatomic, strong) NSString *accessKey;
+
 @property (nonatomic, strong) NSString *secretKey;
+
++ (NSDictionary *)prepareUploadContent:(NSDictionary *)theInfo filename:(NSString *)filename format:(NSString*)format bucket: (NSString *)bucket imageCompress:(UIImage*(^)(UIImage *image)) block;
 
 - (id)initWithAccessKey:(NSString *)accessKey secretKey:(NSString *)secretKey;
 
-- (void) uploadFile:(NSArray *)filesInfo progress:(void(^)(float percentage))progressBlock complete:(void(^)(NSMutableDictionary *result)) block;
-
-- (BOOL)startUploadFiles:(NSArray *)uploadArray progress:(void(^)(float percentage))progressBlock complete:(void(^)(NSMutableDictionary *result)) block;
+- (void)startUploadFiles:(NSArray *)uploadArray progress:(void(^)(float percentage))progressBlock complete:(void(^)(NSMutableDictionary *result)) block;
 
 @end
