@@ -1,7 +1,13 @@
 QiniuUploader
 =============
 
-QiniuUploader for iOS - single image or multi images supported
+QiniuUploader for iOS with AFNetworking 2.0 - single image or multi images supported
+
+### Prepare
+
+install AFNetworking 2.0
+
+`pod "AFNetworking", "~> 2.0"`
 
 ### Usage:
 
