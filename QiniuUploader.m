@@ -93,7 +93,7 @@
     //extracting image from the picker and saving it
     NSString *mediaType = [theInfo objectForKey:UIImagePickerControllerMediaType];
     if ([mediaType isEqualToString:(NSString *)kUTTypeImage] || [mediaType isEqualToString:(NSString *)ALAssetTypePhoto]) {
-        NSString *key = [NSString stringWithFormat:@"%@%@", filename, format];
+        NSString *key = [NSString stringWithFormat:@"%@.%@", filename, format];
         NSString *filePath = [NSTemporaryDirectory() stringByAppendingPathComponent:key];
         NSLog(@"Upload Path: %@", filePath);
         UIImage *newImage;
